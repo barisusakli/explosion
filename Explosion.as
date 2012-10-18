@@ -44,7 +44,6 @@ package
 
             _radius = (Math.random() * (MAX_RADIUS-MIN_RADIUS-1))+MIN_RADIUS;
             _particleCount = (Math.random() * (MAX_PARTICLES-MIN_PARTICLES-1)) + MIN_PARTICLES;
-            //_particleCount = 30;
 
             for (var i:int = 0; i < _particleCount; i++)
             {
@@ -86,10 +85,9 @@ package
             mat.createGradientBox(particleRadius*2, particleRadius*2, 0,-particleRadius,-particleRadius);
 
             sp.graphics.beginGradientFill(GradientType.RADIAL, [_particleCoreColor, _particleMiddleColor,_particleOuterColor], [1.0, 1.0, 0.0], [0,170, 255], mat, "pad", "rgb", 0);
-
             sp.graphics.drawCircle(0, 0, particleRadius);
             sp.graphics.endFill();
-            //addChildAt(sp,0);
+			
             addChildAt(sp,0);
 
             var p:Point = new Point((Math.random() * 2) - 1, (Math.random() * 2) - 1);
